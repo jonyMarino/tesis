@@ -1,0 +1,186 @@
+		Object Oriented C - Simplified release
+			    Laurent Deniau
+			    Copyright 2007
+
+				   
+
+SUMMARY:
+--------
+
+OOC-S provides some very simple coding guidelines and programming
+techniques to allow C programmers to write object oriented program
+nearly as in Java. It is a simplified version of my framework OOC-2.0
+
+http://cern.ch/laurent.deniau/oopc.html#OOC-S
+
+INSTALL:
+--------
+
+Copy the *.[hc] files of the current directory in your project
+(interfaces files are optional). You can also copy the files of the
+directory template to help you start new classes and interfaces.
+
+CONTACT:
+--------
+
+send an email to laurent.deniau@cern.ch
+
+FEATURES:
+---------
+
+OOC-S provides some object oriented feature like class (i.e. TYPE and
+INTERFACE), single inheritance of class, attribute access control,
+java-like interface, interface default method implementation, multiple
+inheritance of interfaces and reference counting management (including
+autorelease). OOC-S is not a framework and minimizes the use of macros
+(one per class) and typedefs (none) and therefore requires some manual
+coding (class initialize) and some care from the programmer. Following
+the template or examples with all compiler warning options enabled
+should avoid most common mistakes and forgetting.
+
+Comparing to OOC-2.0, OOC-S does not provide per attribute access
+control, metaclass, dynamic class, interface inheritance of interface
+(i.e. protocol in OOC-2.0), exception, reflection, and a library of
+useful classes.
+
+Comparing to Java, OOC-S does not provide per attribute access
+control, interface inheritance of interface (for simplicity),
+generics, exception, reflection and a huge library of useful
+classes. But it provides default implementation for interface and a
+limited version of generics can be simulated with macros.
+
+Exception support can be imported and adaptated from one of my other
+frameworks with little work.
+
+REFERENCE COUNTING:
+-------------------
+
+During its lifetime, an object must see as many releases as alloc,
+retains and autoreleases. When the reference counting is balanced
+(#release == alloc+#retain+#release) the object is destroyed.
+Automatic object are created with init method (or variant) and
+destroyed with deinit method. Retaining an auto object has the effect
+to clone it (a different instance is returned) and therefore it must
+implement the clonable interface.
+
+GARBAGE COLLECTOR:
+------------------
+
+OOC-S uses reference counting to manage objects lifetime. If you want
+to use a garbage collector, remove the attribute refcnt in object_p.h,
+adapt object_alloc, object_free, object_retain, object_release and
+object_autorelease in object.c to you garbage collector and throw away
+the autorelease*.[hc] files.
+
+THREADS:
+--------
+
+OOC-S uses the thread local storage mechanism in the presence of
+threads for global state (i.e. autorelease pool). You must define
+_USE_TLS=__thread on the compilation command (e.g. for the example use
+./compile.sh -D_USE_TLS=__thread). If your compiler does not support
+TLS, you can replace it with the POSIX thread specific data mechanism
+(i.e. pthread_getspecific):
+
+http://www.opengroup.org/onlinepubs/009695399/basedefs/pthread.h.html
+
+Nevertheless, all INTERFACEs use static data to store pointers to
+their methods. Because of inheritance, the initialisation of these
+static data happens on the first use/create of INTERFACE/TYPE-instance
+(e.g. xxxxx_interface()/xxxxx_new() and variant). Since there is no
+simple and efficient way to ensure memory synchronisation, your code
+must ensure it happens before any thread creation. One simple way to
+do it, is to call all the xxxxx_interface() functions before any
+thread creation. To collect these functions (if you follow the
+guidelines of OOC-S) on Unix systems you can use something like:
+
+grep -R -E \
+'^[ \t]*INTERFACE[ \t]+\*[a-z0-9_]+_interface\(void\);[ \t]*$' DIR \
+| cut -d '*' -f 2 | sed -e 's/(void)/()/' | sort -u
+
+where DIR is the top directory of your project source code. Another
+way to proceed would be to use thread memory barrier (see the previous
+link) but it is less portable and beyond the scope of OOC-S.
+
+TEMPLATES:
+----------
+
+The directory template contains template files with some documentation
+inside to help you start writing you own classes and interfaces.
+
+EXAMPLES:
+---------
+
+The directory example contains a simple example of use and one-liner
+script to compile it. Adapt the script to your compiler and platform.
+
+- create/destroy an object (requires counter.h):
+
+	struct counter *cnt = counter_new();
+	...
+	cnt->i->release(cnt);
+
+- create/destroy an auto object (requires counter_p.h):
+
+	struct counter_attribute cnt_a = {{ 0, REFCNT_AUTO()}, 0 };
+	struct counter *cnt = (struct counter*)&cnt_a;
+
+	cnt->i = counter_interface(); 
+	cnt->i->init(cnt);
+	...
+	cnt->i->deinit(cnt);
+
+- create/destroy a static object (requires counter_p.h):
+
+	static struct counter_attribute cnt_a = {{ 0, REFCNT_STATIC() }, 0 };
+	static struct counter *cnt = (struct counter*)&cnt_a;
+
+	struct counter *my_cnt(void)
+	{
+	   if (!cnt->i)
+	     cnt->i = counter_interface(), cnt->i->init(cnt);
+	   return cnt;
+	}
+
+	void my_cnt_deinit(void)
+	{
+	   cnt->i->deinit(cnt);
+	}
+
+- retrieve an interface (requires clonable.h):
+
+	struct clonable_interface *clonable_i = INTERFACE_CAST(obj,clonable);
+	assert(clonable_i);
+
+- use an interface (requires clonable.h):
+
+	struct clonable *clone = clonable_i->clone((struct clonable*)obj);
+
+- downcast (requires counter.h):
+
+        struct counter *cnt = TYPE_CAST(obj,counter);
+	assert(cnt);
+
+- retain an object:
+
+	holder->my_obj = obj->i->retain(obj);
+
+- autorelease an object (requires atype.h):
+
+	struct atype *silent_factory(void)
+        {
+	   struct atype *obj = atype_new();
+	   return obj->i->autorelease(obj);
+	}
+
+- creating and destroying an autorelease pool (requires autorelease.h):
+
+	int main(void)
+	{
+	  struct autorelease *pool = autorelease_new();
+
+	  ... code with autoreleased object
+
+	  pool->i->autorelease(pool);
+	  return 0;
+	}
