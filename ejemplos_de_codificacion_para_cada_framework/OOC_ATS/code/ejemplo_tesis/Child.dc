@@ -1,0 +1,35 @@
+
+% Child ctor {
+	struct Child * self = super_ctor(Child(), _self, app);
+
+	self -> data = 0;
+
+	return self;
+}
+
+% Child dtor {
+%casts
+	return super_dtor(Child(), self);
+}
+
+% Child nonPolimorphicMethod {
+%casts
+	self -> data = data;
+}
+
+% Child myMethod {
+%casts
+	return 1;
+}
+
+% Child forward {
+%casts
+	if (selector == (void*)myMethod)
+		myMethod(va_arg(* app, void *));
+	else
+		super_forward(Child(), _self, result,
+			selector, name, app);
+}
+
+
+%init

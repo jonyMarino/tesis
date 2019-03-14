@@ -1,2 +1,4 @@
 $l:	Object.o
 Object.o:	Object.c
+$l:	Child.o
+Child.o:	Child.c

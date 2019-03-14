@@ -44,7 +44,7 @@ targets:     -dc        make thunks for last 'class'
 	  { echo >&2 GNU awk not found; exit 1; }
 
 	for home in $HOME/oop/code/ooc/ $HOME/ooc/ooc/ \
-	    $HOME/Documents/Vorlesungen/oop/code/ooc/ ''; do
+	    $HOME/workspace/tesis/ejemplos_de_codificacion_para_cada_framework/OOC_ATS/code/ooc/ ''; do
 	  [ -d $home ] && break
 	done
 	[ "$home" ] ||
