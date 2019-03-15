@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:embedded_C="http://www.spacebel.com/1.0.2/embedded_C" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.spacebel.com/1.0.2/embedded_C ../org.eclipse.umlgen.gen.embedded.c.profile/resources/Embedded_C/embedded_C.profile.uml#_M358MOlGEeiE2O1Volh6VA">
+  <uml:Model xmi:id="_sLX74C4JEeieH5jKapBnwg" name="RootElement">
+    <packagedElement xmi:type="uml:Package" xmi:id="_vFQ6IC4JEeieH5jKapBnwg" name="Aplicacion">
+      <packagedElement xmi:type="uml:Class" xmi:id="_DtlB8C4KEeieH5jKapBnwg" name="Parent">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_K6tBMFiiEeiHl6gR5njMUA">
+          <body>This is the first class in this class hierarchy
+</body>
+        </ownedComment>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Ofo2UC4KEeieH5jKapBnwg" name="metodo" isAbstract="true"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_3Pi-gC4KEeieH5jKapBnwg" name="ctor" isLeaf="true"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Rv00sC4KEeieH5jKapBnwg" name="Child">
+        <generalization xmi:type="uml:Generalization" xmi:id="_WgoRQC4KEeieH5jKapBnwg" general="_DtlB8C4KEeieH5jKapBnwg"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_dWPeMC4KEeieH5jKapBnwg" name="metodo"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_GLeyUC4LEeieH5jKapBnwg" name="ctor" isLeaf="true"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_z0a1AEJOEeiRq9NLvdJ-Kg" client="_vFQ6IC4JEeieH5jKapBnwg" supplier="_wMivYEJOEeiRq9NLvdJ-Kg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_f9HMEFn3EeiOJ4omxlPvRQ" client="_vFQ6IC4JEeieH5jKapBnwg" supplier="_bS0nMFn3EeiOJ4omxlPvRQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_gXok4Fn3EeiOJ4omxlPvRQ" client="_vFQ6IC4JEeieH5jKapBnwg" supplier="_dNs_gFn3EeiOJ4omxlPvRQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_p2i-AEJLEeiRq9NLvdJ-Kg" name="const char *"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_PGxjkFijEeiHl6gR5njMUA" name="char *"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_wMivYEJOEeiRq9NLvdJ-Kg" name="&lt;stdio.h>"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_bS0nMFn3EeiOJ4omxlPvRQ" name="&lt;stdlib.h>"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_dNs_gFn3EeiOJ4omxlPvRQ" name="&lt;string.h>"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_6g13UEQ0Eem0xI91whdBaw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6g8lAEQ0Eem0xI91whdBaw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6g8lAUQ0Eem0xI91whdBaw" key="Version" value="1.0.6"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6g8lAkQ0Eem0xI91whdBaw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6g8lA0Q0Eem0xI91whdBaw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6g8lBEQ0Eem0xI91whdBaw" key="Date" value="2018-11-15"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6g8lBUQ0Eem0xI91whdBaw" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6g5hsEQ0Eem0xI91whdBaw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../org.eclipse.umlgen.gen.embedded.c.profile/resources/Embedded_C/embedded_C.profile.uml#_M358MOlGEeiE2O1Volh6VA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../org.eclipse.umlgen.gen.embedded.c.profile/resources/Embedded_C/embedded_C.profile.uml#_KMczkP3OEeKacbbsUeqjMA"/>
+    </profileApplication>
+  </uml:Model>
+  <embedded_C:SOOPC xmi:id="_8jLigEQ0Eem0xI91whdBaw" base_Class="_DtlB8C4KEeieH5jKapBnwg"/>
+  <embedded_C:SOOPC xmi:id="_90G-4EQ0Eem0xI91whdBaw" base_Class="_Rv00sC4KEeieH5jKapBnwg"/>
+</xmi:XMI>
