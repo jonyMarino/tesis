@@ -1,0 +1,83 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.eclipse.org/uml2/5.0.0/UML')]
+
+
+[query public redefines(op1: Operation,op2: Operation): Boolean=
+	if(op1.name = op2.name)then
+		op1.ownedParameter->asOrderedSet()->forAll( par1:uml::Parameter 
+		| op2.ownedParameter->exists(par2:uml::Parameter | par2.type.name = par1.type.name 
+		and par1.direction = par2.direction and (par1.direction = ParameterDirectionKind::return 
+		or parameterIndex(op1,par1) = parameterIndex(op2,par2))))
+	else
+		false
+	endif
+/]
+
+[query public parameterIndex (op1 : Operation,par1: Parameter) : Integer = 
+op1.ownedParameter->asOrderedSet()->excluding(op1.ownedParameter->any(direction = ParameterDirectionKind::return))->asOrderedSet()->indexOf(par1)/]
+
+[comment]and op1.ownedParameterSet->asOrderedSet()->indexOf(par1) = op2.ownedParameterSet->asOrderedSet()->indexOf(par2)[/comment]
+
+[query public hasOperation(aClass: Class ,anOperation: Operation): Boolean=
+	if( aClass.ownedOperation->exists( op | op.redefines(anOperation) ) ) then	
+		true
+	else
+		if aClass.superClass->isEmpty() then
+			false
+		else
+			aClass.superClass->exists(s:Class| s.hasOperation(anOperation))
+		endif
+	endif
+/]
+
+[query public getFirstClassesDefinerName(aClass: Class ,anOperation: Operation): Set(Class)=
+		
+if (not aClass.superClass->isEmpty() and aClass.superClass->exists( s:Class| s.hasOperation(anOperation))) then
+	Set(Class){}->union ( aClass.superClass->select( s| s.hasOperation(anOperation)).getFirstClassesDefinerName(anOperation)->asSet() )
+else
+   Set(Class){}->including(aClass)
+endif
+/]
+
+
+[query public hasAncestor(aClass: Class ,anAncestor: Class): Boolean=
+	if( aClass = anAncestor ) then	
+		true
+	else
+		if aClass.superClass->isEmpty() then
+			false
+		else
+			aClass.superClass->exists(s:Class| s.hasAncestor(anAncestor))
+		endif
+	endif
+/]
+
+[query public getRoute(aClass: Class ,anAncestor: Class): OrderedSet(Class)=
+		
+if ( aClass = anAncestor) then
+	OrderedSet(Class){}->prepend(aClass)
+else
+   aClass.superClass->any( s| s.hasAncestor(anAncestor))->asOrderedSet()->addAll 
+		( aClass.superClass->any( s| s.hasAncestor(anAncestor)).getRoute(anAncestor)->asOrderedSet() )
+endif
+/]
+
+[template public main(aNamedElement : uml::NamedElement)]
+[comment @main /]
+
+[if (aNamedElement.oclIsTypeOf(uml::Class)) ]
+[file (aNamedElement.oclAsType(uml::Class).name + '.c', false, 'UTF-8')]
+[genClass(aNamedElement.oclAsType(uml::Class))/]
+[/file]
+[/if]
+	
+[/template]
+
+[template public genClass (aClass : uml::Class) ]
+[for (anOp:uml::Operation | aClass.ownedOperation)]
+	[for (aClass1 : uml::Class | aClass.getFirstClassesDefinerName(anOp))]
+	overload([for(c:Class|aClass.getRoute(aClass1))][c.name/].[/for][anOp.name/]) = methodOvldName([anOp.name/],[aClass1.name/])
+	[/for]
+	
+[/for]
+[/template]

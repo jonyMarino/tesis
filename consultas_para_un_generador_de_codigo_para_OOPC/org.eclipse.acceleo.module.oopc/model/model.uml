@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Y8-dIDnCEemjP6Pn2tCn1Q" name="RootElement">
+  <packagedElement xmi:type="uml:Package" xmi:id="_S5Cn8DnGEemjP6Pn2tCn1Q" name="Package1">
+    <packagedElement xmi:type="uml:Class" xmi:id="_eCnhQDnCEemjP6Pn2tCn1Q" name="Class2">
+      <generalization xmi:type="uml:Generalization" xmi:id="_ferS8DnrEem_M7h-pgEi-g" general="_H0FF4DnrEem_M7h-pgEi-g"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_9BHZwDnCEemjP6Pn2tCn1Q" name="Operation1">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9BHZwTnCEemjP6Pn2tCn1Q" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_TLJz8P3OEeKacbbsUeqjMA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9BHZwjnCEemjP6Pn2tCn1Q" name="arg1">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_PoHyEP3OEeKacbbsUeqjMA"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_dU5foDnCEemjP6Pn2tCn1Q" name="Class1"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_gPWekDnCEemjP6Pn2tCn1Q" name="Class4">
+      <generalization xmi:type="uml:Generalization" xmi:id="_iojxoDnCEemjP6Pn2tCn1Q" general="_foJ7sDnCEemjP6Pn2tCn1Q"/>
+      <generalization xmi:type="uml:Generalization" xmi:id="_j5M6IDnCEemjP6Pn2tCn1Q" general="_eCnhQDnCEemjP6Pn2tCn1Q"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="__62nADnCEemjP6Pn2tCn1Q" name="Operation1">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__63OEDnCEemjP6Pn2tCn1Q" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_TLJz8P3OEeKacbbsUeqjMA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__63OETnCEemjP6Pn2tCn1Q" name="arg1">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_PoHyEP3OEeKacbbsUeqjMA"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_foJ7sDnCEemjP6Pn2tCn1Q" name="Class3">
+      <generalization xmi:type="uml:Generalization" xmi:id="_jXbCwDnCEemjP6Pn2tCn1Q" general="_dU5foDnCEemjP6Pn2tCn1Q"/>
+      <generalization xmi:type="uml:Generalization" xmi:id="_e6uRUDnrEem_M7h-pgEi-g" general="_H0FF4DnrEem_M7h-pgEi-g"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_kgvbQDnCEemjP6Pn2tCn1Q" name="Operation1">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_vv6pcDnCEemjP6Pn2tCn1Q" name="arg1">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_PoHyEP3OEeKacbbsUeqjMA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_uafuoDnCEemjP6Pn2tCn1Q" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_TLJz8P3OEeKacbbsUeqjMA"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_q1MmoDnoEem_M7h-pgEi-g" name="Class5">
+      <generalization xmi:type="uml:Generalization" xmi:id="_vE46MDnoEem_M7h-pgEi-g" general="_gPWekDnCEemjP6Pn2tCn1Q"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_q1MmoznoEem_M7h-pgEi-g" name="Operation1">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_q1MmpDnoEem_M7h-pgEi-g" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_TLJz8P3OEeKacbbsUeqjMA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_q1MmpTnoEem_M7h-pgEi-g" name="arg1">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_PoHyEP3OEeKacbbsUeqjMA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_dZfvIDnrEem_M7h-pgEi-g" name="Operation2" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_dZfvITnrEem_M7h-pgEi-g" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_TLJz8P3OEeKacbbsUeqjMA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_dZfvIjnrEem_M7h-pgEi-g" name="arg1">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_PoHyEP3OEeKacbbsUeqjMA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_dZfvIznrEem_M7h-pgEi-g" name="arg2">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_i93CQP3PEeKacbbsUeqjMA"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_H0FF4DnrEem_M7h-pgEi-g" name="Class6">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MH6SkDnrEem_M7h-pgEi-g" name="Operation2" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_MH6SkTnrEem_M7h-pgEi-g" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_TLJz8P3OEeKacbbsUeqjMA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_MH6SkjnrEem_M7h-pgEi-g" name="arg1">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_PoHyEP3OEeKacbbsUeqjMA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PkzQMDnrEem_M7h-pgEi-g" name="arg2">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_i93CQP3PEeKacbbsUeqjMA"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZNzHYDnCEemjP6Pn2tCn1Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZN_UoDnCEemjP6Pn2tCn1Q" source="PapyrusVersion">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZN_UoTnCEemjP6Pn2tCn1Q" key="Version" value="1.0.6"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZN_UojnCEemjP6Pn2tCn1Q" key="Comment" value=""/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZN_UoznCEemjP6Pn2tCn1Q" key="Copyright" value=""/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZN_UpDnCEemjP6Pn2tCn1Q" key="Date" value="2018-11-15"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZN_UpTnCEemjP6Pn2tCn1Q" key="Author" value=""/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZN3_4DnCEemjP6Pn2tCn1Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_M358MOlGEeiE2O1Volh6VA"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_KMczkP3OEeKacbbsUeqjMA"/>
+  </profileApplication>
+</uml:Model>
