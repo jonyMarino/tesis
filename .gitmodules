@@ -4,3 +4,6 @@
 [submodule "ejemplos_de_codificacion_para_cada_framework/Dynace/Dynace"]
 	path = ejemplos_de_codificacion_para_cada_framework/Dynace/Dynace
 	url = https://github.com/blakemcbride/Dynace.git
+[submodule "ejemplos_de_codificacion_para_cada_framework/COS/COS"]
+	path = ejemplos_de_codificacion_para_cada_framework/COS/COS
+	url = https://github.com/CObjectSystem/COS.git
