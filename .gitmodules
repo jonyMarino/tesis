@@ -1,3 +1,6 @@
 [submodule "generador_de_codigo_para_SOOPC_OOC_Y_DYNACE/UML2ooec"]
 	path = generador_de_codigo_para_SOOPC_OOC_Y_DYNACE/UML2ooec
 	url = https://github.com/jonyMarino/UML2ooec.git
+[submodule "ejemplos_de_codificacion_para_cada_framework/Dynace/Dynace"]
+	path = ejemplos_de_codificacion_para_cada_framework/Dynace/Dynace
+	url = https://github.com/blakemcbride/Dynace.git
