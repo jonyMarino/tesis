@@ -73,10 +73,16 @@ endif
 	
 [/template]
 
+
+
 [template public genClass (aClass : uml::Class) ]
 [for (anOp:uml::Operation | aClass.ownedOperation)]
 	[for (aClass1 : uml::Class | aClass.getFirstClassesDefinerName(anOp))]
+	[if(aClass1=aClass)]
+	defmethod([aClass1.name/]_[anOp.name/])
+	[else]
 	overload([for(c:Class|aClass.getRoute(aClass1))][c.name/].[/for][anOp.name/]) = methodOvldName([anOp.name/],[aClass1.name/])
+	[/if]
 	[/for]
 	
 [/for]
