@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_sLX74C4JEeieH5jKapBnwg" name="RootElement">
+  <packagedElement xmi:type="uml:Package" xmi:id="_vFQ6IC4JEeieH5jKapBnwg" name="Aplicacion">
+    <packagedElement xmi:type="uml:Class" xmi:id="_DtlB8C4KEeieH5jKapBnwg" name="Parent">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_K6tBMFiiEeiHl6gR5njMUA">
+        <body>This is the first class in this class hierarchy
+</body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_iFmwUC4KEeieH5jKapBnwg" name="name" type="_p2i-AEJLEeiRq9NLvdJ-Kg"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Ofo2UC4KEeieH5jKapBnwg" name="vPrint" isAbstract="true"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_3Pi-gC4KEeieH5jKapBnwg" name="ctor" isLeaf="true">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_8osNcC4KEeieH5jKapBnwg" name="name" type="_p2i-AEJLEeiRq9NLvdJ-Kg"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Rv00sC4KEeieH5jKapBnwg" name="Child">
+      <generalization xmi:type="uml:Generalization" xmi:id="_WgoRQC4KEeieH5jKapBnwg" general="_DtlB8C4KEeieH5jKapBnwg"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_dWPeMC4KEeieH5jKapBnwg" name="vPrint"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_GLeyUC4LEeieH5jKapBnwg" name="ctor" isLeaf="true">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_GLfZYC4LEeieH5jKapBnwg" name="name" type="_p2i-AEJLEeiRq9NLvdJ-Kg"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_-DeYEEJQEeiRq9NLvdJ-Kg" name="getNameFollowedByClassName" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_szaBAFiiEeiHl6gR5njMUA" visibility="public" type="_PGxjkFijEeiHl6gR5njMUA" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_z0a1AEJOEeiRq9NLvdJ-Kg" client="_vFQ6IC4JEeieH5jKapBnwg" supplier="_wMivYEJOEeiRq9NLvdJ-Kg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_A2EbgEJREeiRq9NLvdJ-Kg" name="GrandChild">
+      <generalization xmi:type="uml:Generalization" xmi:id="_HVlcoEJREeiRq9NLvdJ-Kg" general="_Rv00sC4KEeieH5jKapBnwg"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_A2Ebg0JREeiRq9NLvdJ-Kg" name="ctor" isLeaf="true">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_A2EbhEJREeiRq9NLvdJ-Kg" name="name" type="_p2i-AEJLEeiRq9NLvdJ-Kg"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_DdJygEJREeiRq9NLvdJ-Kg" name="foo" isLeaf="true"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZTIp4FijEeiHl6gR5njMUA" name="getNameFollowedByClassName" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZTJQ8FijEeiHl6gR5njMUA" visibility="public" type="_PGxjkFijEeiHl6gR5njMUA" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_f9HMEFn3EeiOJ4omxlPvRQ" client="_vFQ6IC4JEeieH5jKapBnwg" supplier="_bS0nMFn3EeiOJ4omxlPvRQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_gXok4Fn3EeiOJ4omxlPvRQ" client="_vFQ6IC4JEeieH5jKapBnwg" supplier="_dNs_gFn3EeiOJ4omxlPvRQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_p2i-AEJLEeiRq9NLvdJ-Kg" name="const char *"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_PGxjkFijEeiHl6gR5njMUA" name="char *"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_wMivYEJOEeiRq9NLvdJ-Kg" name="&lt;stdio.h>"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_bS0nMFn3EeiOJ4omxlPvRQ" name="&lt;stdlib.h>"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_dNs_gFn3EeiOJ4omxlPvRQ" name="&lt;string.h>"/>
+</uml:Model>
