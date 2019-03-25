@@ -1,0 +1,30 @@
+
+Wed Jul 11 22:35:36 ART 2018
+================================================================================
+Start of user code for _copy
+	/* makes the default object copying (bit-by-bit) */
+	return OOC_COPY_DEFAULT;
+	
+	/*Other alternatives:*/
+
+	/* Copies data by hand */
+	//self->data = from->data;
+	//...
+	//return OOC_COPY_DONE;
+	
+	/* Prevent object duplication */
+	//return OOC_NO_COPY;
+	//End of user code
+Start of user code for _destructor
+	//TODO
+	//End of user code
+Start of user code for _finalize
+	/* Release global resources! */
+	//End of user code
+Start of user code for _initialize
+	//TO DO
+	//ooc_init_class( !!! Classes that are USED by  !!! ); Remove if you initialize it other place!
+	//End of user code
+Start of user code for _constructor */
+	chain_constructor( , self,_params ); /*!!! TODO !!! change the third parameter as required! */
+	/*End of user code
