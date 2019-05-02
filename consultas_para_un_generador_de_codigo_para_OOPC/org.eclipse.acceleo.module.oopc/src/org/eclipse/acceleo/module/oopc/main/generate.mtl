@@ -1,6 +1,7 @@
 [comment encoding = UTF-8 /]
 [module generate('http://www.eclipse.org/uml2/5.0.0/UML')]
 
+[import org::eclipse::acceleo::module::oopc::services::uml2oopcservices /]
 
 [query public redefines(op1: Operation,op2: Operation): Boolean=
 	if(op1.name = op2.name)then
@@ -62,6 +63,22 @@ else
 endif
 /]
 
+
+[query public superPaths(aClass: uml::Class) : OrderedSet(Sequence(uml::Class))=
+let superSuperPaths : Set(Sequence(uml::Class)) = if aClass.superClass->isEmpty()
+then OrderedSet(Sequence(Class)){Sequence(Class){}}
+else aClass.superClass->iterate(superClass1;
+result : Set(Sequence(uml::Class)) = Set(Sequence(uml::Class)){}
+| result->union(superPaths(superClass1)))
+endif in
+superSuperPaths->collectNested(superPath : Sequence(uml::Class) | superPath->prepend(aClass))->asOrderedSet()
+/]
+
+[query public getPaths(fromClass: uml::Class, toClass: uml::Class) : OrderedSet(Sequence(uml::Class))=
+fromClass.superPaths()->select(path: Sequence(uml::Class) | path->includes(toClass))->collectNested(path: Sequence(uml::Class) | path->subSequence(2,path->indexOf(toClass)))->asOrderedSet()
+/]
+
+
 [template public main(aNamedElement : uml::NamedElement)]
 [comment @main /]
 
@@ -81,9 +98,28 @@ endif
 	[if(aClass1=aClass)]
 	defmethod([aClass1.name/]_[anOp.name/])
 	[else]
-	overload([for(c:Class|aClass.getRoute(aClass1))][c.name/].[/for][anOp.name/]) = methodOvldName([anOp.name/],[aClass1.name/])
+    [for (path:Sequence(Class) | getPaths(aClass,aClass1))]
+	overload([for(c:Class|path)][c.name/].[/for][anOp.name/]) = methodOvldName([anOp.name/],[aClass1.name/])
+	[/for]
+
 	[/if]
 	[/for]
-	
+
+[/for]
+
+overload JAVA way:
+
+[for (anOp:uml::Operation | aClass.ownedOperation)]
+	[for (aClass1 : uml::Class | aClass.getFirstClassesDefinerName(anOp))]
+	[if(aClass1=aClass)]
+
+	[else]
+	[for (path:Sequence(Class) | getPathsJAVA(aClass,aClass1))]
+	overload([for(c:Class|path)][c.name/].[/for][anOp.name/]) = methodOvldName([anOp.name/],[aClass1.name/])
+	[/for]
+
+	[/if]
+	[/for]
+
 [/for]
 [/template]

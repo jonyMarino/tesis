@@ -1,0 +1,7 @@
+[comment encoding = UTF-8 /]
+[module uml2oopcservices('http://www.eclipse.org/uml2/5.0.0/UML')/]
+
+[query public getPathsJAVA(arg0 : Class, arg1 : Class) : Set ( Sequence (Class))
+	= invoke('org.eclipse.acceleo.module.oopc.services.UML2OOPCServices', 'getPathsJAVA(org.eclipse.uml2.uml.Class, org.eclipse.uml2.uml.Class)', Sequence{arg0, arg1})
+/]
+

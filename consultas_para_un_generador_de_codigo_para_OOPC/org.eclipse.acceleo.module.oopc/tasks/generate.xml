@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="org.eclipse.acceleo.module.oopc">
-    <property name="ECLIPSE_HOME" value="../../../Escritorio/eclipse modeling mars"/>
-    <property name="ECLIPSE_WORKSPACE" value="../.."/>
+    <property name="ECLIPSE_HOME" value="../../../../../Escritorio/eclipse modeling mars"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../.."/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="org.eclipse.acceleo.module.oopc.libraryclasspath">

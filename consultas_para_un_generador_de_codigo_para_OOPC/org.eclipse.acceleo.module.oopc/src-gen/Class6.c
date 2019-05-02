@@ -1,3 +1,8 @@
-	overload(Class6.Operation2) = methodOvldName(Operation2,Class6)
-	
+	defmethod(Class6_Operation2)
+
+
+overload JAVA way:
+
+
+
 
