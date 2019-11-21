@@ -1,10 +1,12 @@
 ##################################################################################
- # Copyright: 
+ # Copyright: 2019 All rights reserved.
  # Project: RootElement
  # File: Aplicacion/Aplicacion.mk
- # Code Management Tool File Version: 
+ # Code Management Tool File Version: 1.0.0
+ # Date: $Date$
  # SDD Component: Aplicacion
- # Author: 
+ # Author: marino
+ # Last Change: $Id$
 ##################################################################################
 
 ###################################

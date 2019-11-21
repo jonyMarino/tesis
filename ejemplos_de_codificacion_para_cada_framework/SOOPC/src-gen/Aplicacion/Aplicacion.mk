@@ -20,9 +20,8 @@ APLICACION_DIR						 = $(SRC_DIR)Aplicacion
 ###################################
 SUBDIRS							+= $(APLICACION_DIR)
 SUBDIRS							+= $(BASE_DIR)
-APLICACION_SRCS						 =	$(APLICACION_DIR)/MyMixin.c	\
-	$(APLICACION_DIR)/Parent.c	\
-	$(APLICACION_DIR)/MyInterface.c	\
+APLICACION_SRCS						 =	$(APLICACION_DIR)/Parent.c	\
+	$(APLICACION_DIR)/Child.c	\
 													$(APLICACION_DIR)/Aplicacion.c
 									
 

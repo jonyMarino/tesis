@@ -26,7 +26,7 @@ C_DEPS += \
 src-gen/Aplicacion/%.o: ../src-gen/Aplicacion/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C Compiler'
-	gcc -I"/home/marino/workspace/soopc.test/src-gen" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	gcc -I"/home/marino/workspace_tesis/tesis/generador_de_codigo_para_SOOPC_OOC_Y_DYNACE/verificaciones_generacion_de_codigo_para_SOOPC/src-gen" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
