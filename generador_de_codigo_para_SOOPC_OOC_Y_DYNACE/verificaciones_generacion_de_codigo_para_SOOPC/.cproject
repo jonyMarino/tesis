@@ -33,7 +33,7 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.88409443" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.debug.option.debugging.level.2131233650" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.1876354030" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src-gen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/soopc.test/src-gen}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1677709323" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>

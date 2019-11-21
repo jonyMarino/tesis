@@ -8,7 +8,6 @@
 #include <stdio.h>
 #include "Aplicacion/Parent.h"
 #include "Aplicacion/Child.h"
-#include "Aplicacion/GrandChild.h"
 
 void printNameFollowedByClassName(Child * child)
 {
@@ -21,11 +20,11 @@ void printNameFollowedByClassName(Child * child)
 int main(int argc, char ** argv)
 {
 
-	GrandChild grand;
+	Child grand;
 	Child child;
 	Child * childs[2]={(Child*)&grand,(Child*)&child};
 
-	GrandChild_ctor(&grand,"Mike");
+	Child_ctor(&grand,"Mike");
 	Child_ctor(&child,"Junior");
 
 	for(int i = 0 ; i < 2 ; i++ )

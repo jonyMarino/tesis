@@ -70,10 +70,10 @@
   :testfail: ".fail"
   :dependencies: ".d"
 :unity:
-  :vendor_path: "/home/marino/workspace/soopc.test/test/vendor/ceedling/vendor"
+  :vendor_path: "/home/marino/tesis/generador_de_codigo_para_SOOPC_OOC_Y_DYNACE/verificaciones_generacion_de_codigo_para_SOOPC/test/vendor/ceedling/vendor"
   :defines: []
 :cmock:
-  :vendor_path: "/home/marino/workspace/soopc.test/test/vendor/ceedling/vendor"
+  :vendor_path: "/home/marino/tesis/generador_de_codigo_para_SOOPC_OOC_Y_DYNACE/verificaciones_generacion_de_codigo_para_SOOPC/test/vendor/ceedling/vendor"
   :defines: []
   :includes: []
   :mock_prefix: mock_
@@ -92,7 +92,7 @@
   :verbosity: 3
   :unity_helper: false
 :cexception:
-  :vendor_path: "/home/marino/workspace/soopc.test/test/vendor/ceedling/vendor"
+  :vendor_path: "/home/marino/tesis/generador_de_codigo_para_SOOPC_OOC_Y_DYNACE/verificaciones_generacion_de_codigo_para_SOOPC/test/vendor/ceedling/vendor"
   :defines: []
 :test_runner:
   :includes: []

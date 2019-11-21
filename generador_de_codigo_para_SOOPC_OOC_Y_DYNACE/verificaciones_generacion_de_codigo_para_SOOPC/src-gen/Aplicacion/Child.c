@@ -1,11 +1,13 @@
 /**********************************************************************************
- * Copyright: 
+ * Copyright: 2019 All rights reserved.
  * Project: RootElement
  * File: Aplicacion/Child.c
- * Code Management Tool File Version: 
+ * Code Management Tool File Version: 1.0.0
+ * Date: $Date$
  * SDD Component: Child
  * Language: C
- * Author: 
+ * Author: marino
+ * Last Change: $Id$
  **********************************************************************************/
 
 /*!

@@ -21,8 +21,8 @@ APLICACION_DIR						 = $(SRC_DIR)Aplicacion
 SUBDIRS							+= $(APLICACION_DIR)
 SUBDIRS							+= $(BASE_DIR)
 APLICACION_SRCS						 =	$(APLICACION_DIR)/GrandChild.c	\
-	$(APLICACION_DIR)/Child.c	\
 	$(APLICACION_DIR)/Parent.c	\
+	$(APLICACION_DIR)/Child.c	\
 													$(APLICACION_DIR)/Aplicacion.c
 									
 

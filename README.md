@@ -31,11 +31,11 @@ Después de eso va a poder compilar el ejemplo de COS en COSDemo
 ejecutando ```make``` dentro de la carpeta COSDemo.
 
 Para compilar el generador de código ir a
-generador_de_codigo_para_SOOPC_OOC_Y_DYNACE/UML2ooec/org.eclipse.umlgen.gen.embedded.c/releng/org.eclipse.umlgen.gen.embedded.c.build
+generador_de_codigo_para_SOOPC_OOC_Y_DYNACE/UML2ooec/releng/org.eclipse.umlgen.gen.embedded.c.build
 y ejecutar desde consola `mvn clean package`
 Luego de esto se generan los plugins del generador que pueden ser
 instalados en eclipse (Luna o Mars). Los mismos se encuentrarán en
-org.eclipse.umlgen.gen.embedded.c/releng/org.eclipse.umlgen.gen.embedded.c.repository/target/repository/
+/releng/org.eclipse.umlgen.gen.embedded.c.repository/target/repository/
 Para instalarlos en eclipse se debe ir a Help->install new software->
 add... -> file -> y seleccionar la ubicación anterior.
 Luego marcar el checkbox de Eclipse UML Generators y presionar Finish.

@@ -76,8 +76,10 @@ void test_child_vtable(void)
 void test_child_redefinicion(void)
 {
     Parent aParent = parent_new("Papa");
+    Parent aChild = child_new("Papa");
 	TEST_ASSERT_NOT_EQUAL(ChildVirtual(aChild)->Parent.Serializable.serialize, ParentVirtual(aParent)->Serializable.serialize);
     ooc_delete((Object)aParent);
+    ooc_delete((Object)aChild);
 }
 
 

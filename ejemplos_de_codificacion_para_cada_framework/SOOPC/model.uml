@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:embedded_C="http://www.spacebel.com/1.0.2/embedded_C" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.spacebel.com/1.0.2/embedded_C ../org.eclipse.umlgen.gen.embedded.c.profile/resources/Embedded_C/embedded_C.profile.uml#_M358MOlGEeiE2O1Volh6VA">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:embedded_C="http://www.spacebel.com/1.0.2/embedded_C" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.spacebel.com/1.0.2/embedded_C pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_cY7UcC3VEeism-Ay14400w">
   <uml:Model xmi:id="_sLX74C4JEeieH5jKapBnwg" name="RootElement">
     <packagedElement xmi:type="uml:Package" xmi:id="_vFQ6IC4JEeieH5jKapBnwg" name="Aplicacion">
       <packagedElement xmi:type="uml:Class" xmi:id="_DtlB8C4KEeieH5jKapBnwg" name="Parent">
@@ -36,6 +36,12 @@
         <references xmi:type="ecore:EPackage" href="../org.eclipse.umlgen.gen.embedded.c.profile/resources/Embedded_C/embedded_C.profile.uml#_M358MOlGEeiE2O1Volh6VA"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../org.eclipse.umlgen.gen.embedded.c.profile/resources/Embedded_C/embedded_C.profile.uml#_KMczkP3OEeKacbbsUeqjMA"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_iCcgsAxkEeqEuYKBPtZ16A">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iC_TQAxkEeqEuYKBPtZ16A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_cY7UcC3VEeism-Ay14400w"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLGEN_PROFILES/Embedded_C/embedded_C.profile.uml#_KMczkP3OEeKacbbsUeqjMA"/>
     </profileApplication>
   </uml:Model>
   <embedded_C:SOOPC xmi:id="_8jLigEQ0Eem0xI91whdBaw" base_Class="_DtlB8C4KEeieH5jKapBnwg"/>
